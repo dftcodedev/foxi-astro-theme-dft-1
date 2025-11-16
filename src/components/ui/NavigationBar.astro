@@ -72,14 +72,13 @@ const savedNavActions = navActions.map((action) => ({
 									{item.name}
 								</a>
 							) : (
-								<button
-									type="button"
+								<span
 									role="menuitem"
-									class="header__menu-link"
+									class={`header__menu-link ${isActivePath(item.link) ? 'active' : ''}`}
 								>
 									{item.name}
 									<Icon name="chevron-down" class="header__menu-chevron" />
-								</button>
+								</span>
 							)}
 							{item.submenu && (
 								<ul class="header__submenu">
