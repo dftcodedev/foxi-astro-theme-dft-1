@@ -1,0 +1,82 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - UI
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+import CTA from '../components/blocks/CTA/BasicLight.astro'
+
+// Content
+// - SEO
+const SEO = {
+	title: 'Our Approach | TheLearnBetter.co',
+	description:
+		'Learn about our methodology and approach to helping learntech companies accelerate growth through strategic positioning and market development.'
+}
+// - Page Header
+const header = {
+	title: 'Our <strong>Approach</strong> to LearnTech Growth',
+	text: 'We combine deep market expertise with practical, execution-focused strategies designed for learntech companies.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.text} />
+
+	<Section>
+		<Row>
+			<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+				<h2>How We Work</h2>
+				<p class="text-lg">
+					Our approach is grounded in understanding the unique challenges of the learntech market and translating that understanding into practical strategies your team can execute.
+				</p>
+			</Col>
+		</Row>
+
+		<Row>
+			<Col span="6">
+				<h3>Market-Focused</h3>
+				<p>
+					We bring deep expertise in the learntech space, understanding how educational institutions and corporate learning teams make decisions, what drives their buying process, and how to effectively reach decision-makers.
+				</p>
+			</Col>
+			<Col span="6">
+				<h3>Strategy to Execution</h3>
+				<p>
+					We don't just deliver strategy documents. Our work includes clear priorities, actionable frameworks, and practical guidance that enables your team to execute and achieve results.
+				</p>
+			</Col>
+		</Row>
+
+		<Row classes="mt-8">
+			<Col span="6">
+				<h3>Collaborative Partnership</h3>
+				<p>
+					We work closely with your team to understand your unique context, capabilities, and goals. Our recommendations are tailored to your specific situation and designed to work within your constraints.
+				</p>
+			</Col>
+			<Col span="6">
+				<h3>Measurable Outcomes</h3>
+				<p>
+					We focus on outcomes that matter: qualified leads, strategic partnerships, improved market positioning, and sustainable growth momentum that compounds over time.
+				</p>
+			</Col>
+		</Row>
+	</Section>
+
+	<Section classes="bg-neutral-50 dark:bg-neutral-900">
+		<Row>
+			<Col span="12" align="center" classes="max-w-4xl mx-auto">
+				<h2>Engagement Process</h2>
+				<p class="text-lg pb-0">
+					We typically begin with a discovery phase to understand your market position, goals, and challenges. From there, we develop tailored strategies and work with your team to implement them effectively.
+				</p>
+			</Col>
+		</Row>
+	</Section>
+
+	<CTA />
+</Layout>

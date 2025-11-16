@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Section from '../../components/ui/Section.astro'
+import Row from '../../components/ui/Row.astro'
+import Col from '../../components/ui/Col.astro'
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import CTA from '../../components/blocks/CTA/BasicDark.astro'
+
+import servicesData from '../../data/json-files/servicesData.json'
+const service = servicesData.find(s => s.slug === 'market-positioning')
+
+const SEO = {
+	title: 'Market Positioning for LearnTech Companies | TheLearnBetter.co',
+	description: 'Define and communicate your unique value in the learntech landscape. Strategic market positioning services to help your learntech company stand out.'
+}
+
+const header = {
+	title: '<strong>Market Positioning</strong> for LearnTech Companies',
+	text: service?.description || ''
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.text} />
+
+	<Section>
+		<Row>
+			<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+				<h2>Why Market Positioning Matters</h2>
+				<p class="text-lg">
+					In the crowded learntech landscape, clear positioning is essential. Organizations need to quickly understand what makes your solution unique and why it matters to them.
+				</p>
+			</Col>
+		</Row>
+
+		<Row>
+			<Col span="6">
+				<h3>What We Deliver</h3>
+				<ul class="space-y-2 list-disc list-inside">
+					{service?.benefits.map(benefit => (
+						<li>{benefit}</li>
+					))}
+				</ul>
+			</Col>
+			<Col span="6">
+				<h3>Our Approach</h3>
+				<ul class="space-y-2 list-disc list-inside">
+					{service?.approach.map(step => (
+						<li>{step}</li>
+					))}
+				</ul>
+			</Col>
+		</Row>
+	</Section>
+
+	<Section classes="bg-neutral-50 dark:bg-neutral-900">
+		<Row>
+			<Col span="12" align="center" classes="max-w-4xl mx-auto">
+				<h2>Who This Is For</h2>
+				<p class="text-lg pb-0">
+					Our market positioning services are designed for learntech companies looking to clarify their value proposition, differentiate from competitors, and communicate more effectively with educational institutions and corporate learning organizations.
+				</p>
+			</Col>
+		</Row>
+	</Section>
+
+	<CTA />
+</Layout>

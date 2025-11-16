@@ -18,27 +18,27 @@ const faqIntegrations = faqData.filter((faq) => faq.category === 'integrations')
 import faqImage1 from '../assets/faq/faq-01.png'
 // - SEO
 const SEO = {
-	title: 'Foxi | Get Your Questions Answered with a Smile',
+	title: 'FAQ | TheLearnBetter.co',
 	description:
-		'Dive into the Foxi FAQ Funhouse to get answers to all your questions about pricing, integrations, features, and more. Discover how Foxi can make your work life more productive and enjoyable.'
+		'Find answers to common questions about our growth services for learntech companies, including our approach, engagement process, and how we can help your company grow.'
 }
 // - Page Header
 const header = {
-	title: 'Get Answers to Your <strong>Foxi</strong> Questions.',
-	text: 'Find answers to common questions about Foxi '
+	title: 'Frequently Asked <strong>Questions</strong>',
+	text: 'Find answers to common questions about our services and approach.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<FAQ
-		title="Understanding Our Pricing Plans"
-		text="Get all the details on Foxi’s pricing plans. Learn about the costs, discounts, and subscription options to find the best plan that fits your needs and budget."
+		title="About Our Services"
+		text="Learn about our growth services for learntech companies, including market positioning, customer acquisition, and strategic partnerships."
 		data={faqPricing}
 	/>
 	<TextImage
-		title="Why Foxi’s Pricing Plans Offer Great Value"
-		text="At Foxi, we believe in providing exceptional value at every price point. Our pricing plans are designed to cater to a variety of needs, from individuals and small teams to large enterprises. Each plan includes access to our powerful features, seamless integrations, and top-notch customer support. "
+		title="Tailored to the <strong>LearnTech</strong> Market"
+		text="We understand the unique challenges of selling to educational institutions and corporate learning organizations. Our strategies are informed by deep market knowledge and designed for practical implementation. We focus on creating sustainable growth through clear positioning, systematic customer acquisition, and strategic partnerships."
 		image={faqImage1}
 		mobileImage={faqImage1}
 		imagePosition="left"
@@ -46,8 +46,8 @@ const header = {
 		classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
 	/>
 	<FAQ
-		title="Integrations Made Easy"
-		text="Discover how Foxi seamlessly integrates with your favorite tools and platforms. From Google Calendar to Slack, find out how to connect and enhance your productivity with powerful integrations."
+		title="Working Together"
+		text="Learn about our engagement process, timelines, and how we collaborate with learntech companies to drive growth."
 		data={faqIntegrations}
 	/>
 	<CTA />

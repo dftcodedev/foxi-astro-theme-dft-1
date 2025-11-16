@@ -34,24 +34,25 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.svg',
-		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		alt: 'TheLearnBetter.co',
+		text: 'TheLearnBetter.co'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
-		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Features', link: '/features' },
 		{
-			name: 'Resources',
-			link: '#',
+			name: 'Services',
+			link: '/services',
 			submenu: [
-				{ name: 'Blog', link: '/blog' },
-				{ name: 'Changelog', link: '/changelog' },
-				{ name: 'FAQ', link: '/faq' },
-				{ name: 'Terms', link: '/terms' }
+				{ name: 'Market Positioning', link: '/services/market-positioning' },
+				{ name: 'Customer Acquisition', link: '/services/customer-acquisition' },
+				{ name: 'Growth Strategy', link: '/services/growth-strategy' },
+				{ name: 'Content Marketing', link: '/services/content-marketing' },
+				{ name: 'Partnerships', link: '/services/partnerships' }
 			]
 		},
+		{ name: 'Our Approach', link: '/approach' },
+		{ name: 'Insights', link: '/blog' },
 		{ name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [{ name: 'Get in Touch', link: '/contact', style: 'primary', size: 'lg' }]
 }

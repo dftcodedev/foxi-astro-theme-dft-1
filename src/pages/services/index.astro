@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Section from '../../components/ui/Section.astro'
+import Row from '../../components/ui/Row.astro'
+import Col from '../../components/ui/Col.astro'
+import Hero from '../../components/blocks/hero/PageHeader.astro'
+import CTA from '../../components/blocks/CTA/BasicDark.astro'
+import Card from '../../components/ui/cards/BasicCard.astro'
+
+import servicesData from '../../data/json-files/servicesData.json'
+
+const SEO = {
+	title: 'Growth Services for LearnTech Companies | TheLearnBetter.co',
+	description: 'Comprehensive growth services including market positioning, customer acquisition, growth strategy, content marketing, and partnerships for learntech companies.'
+}
+
+const header = {
+	title: 'Growth Services for <strong>LearnTech</strong> Companies',
+	text: 'We partner with learntech organizations to accelerate growth through strategic positioning, customer acquisition, and market development.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Hero title={header.title} text={header.text} />
+
+	<Section>
+		<Row>
+			<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+				<h2>How We Help LearnTech Companies Grow</h2>
+				<p class="text-lg">
+					Our services are designed specifically for companies in the learntech space, helping you reach educational institutions, corporate learning teams, and organizations seeking innovative learning solutions.
+				</p>
+			</Col>
+		</Row>
+
+		<Row>
+			{servicesData.map(service => (
+				<Col span="4">
+					<Card
+						title={service.title}
+						subtitle={service.shortDescription}
+						link={`/services/${service.slug}`}
+					/>
+				</Col>
+			))}
+		</Row>
+	</Section>
+
+	<Section classes="bg-neutral-50 dark:bg-neutral-900">
+		<Row>
+			<Col span="12" align="center" classes="max-w-4xl mx-auto">
+				<h2>Our Approach</h2>
+				<p class="text-lg">
+					We combine deep understanding of the learntech market with proven growth methodologies. Our work is grounded in research, focused on practical execution, and designed to create sustainable growth momentum.
+				</p>
+			</Col>
+		</Row>
+
+		<Row classes="mt-12">
+			<Col span="4">
+				<h3>Market-Focused</h3>
+				<p>We understand the unique dynamics of selling to educational institutions and corporate learning organizations.</p>
+			</Col>
+			<Col span="4">
+				<h3>Practical & Actionable</h3>
+				<p>Our strategies are designed for implementation, with clear priorities and realistic timelines.</p>
+			</Col>
+			<Col span="4">
+				<h3>Results-Oriented</h3>
+				<p>We focus on outcomes that matter: qualified leads, strategic partnerships, and sustainable growth.</p>
+			</Col>
+		</Row>
+	</Section>
+
+	<CTA />
+</Layout>

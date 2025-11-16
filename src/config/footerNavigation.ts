@@ -35,34 +35,51 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'TheLearnBetter.co',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'The Learn Better Company partners with learntech organizations to accelerate growth through strategic market positioning, customer acquisition, and content marketing.',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'TheLearnBetter.co',
+			text: 'TheLearnBetter.co'
 		}
 	},
 	footerColumns: [
 		{
-			category: 'Product',
+			category: 'Services',
 			subCategories: [
 				{
-					subCategory: 'Features',
-					subCategoryLink: '/features'
+					subCategory: 'Market Positioning',
+					subCategoryLink: '/services/market-positioning'
 				},
 				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
+					subCategory: 'Customer Acquisition',
+					subCategoryLink: '/services/customer-acquisition'
 				},
 				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
+					subCategory: 'Growth Strategy',
+					subCategoryLink: '/services/growth-strategy'
 				},
 				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
+					subCategory: 'Content Marketing',
+					subCategoryLink: '/services/content-marketing'
+				},
+				{
+					subCategory: 'Partnerships',
+					subCategoryLink: '/services/partnerships'
+				}
+			]
+		},
+		{
+			category: 'Company',
+			subCategories: [
+				{
+					subCategory: 'Our Approach',
+					subCategoryLink: '/approach'
+				},
+				{
+					subCategory: 'Insights',
+					subCategoryLink: '/blog'
 				},
 				{
 					subCategory: 'Terms',
@@ -71,41 +88,24 @@ export const footerNavigationData: FooterData = {
 			]
 		},
 		{
-			category: 'About us',
+			category: 'Contact',
 			subCategories: [
 				{
-					subCategory: 'About us',
-					subCategoryLink: '/'
-				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
-				}
-			]
-		},
-		{
-			category: 'Get in touch',
-			subCategories: [
-				{
-					subCategory: 'Contact',
+					subCategory: 'Get in Touch',
 					subCategoryLink: '/contact'
 				},
 				{
-					subCategory: 'Support',
+					subCategory: 'New Business',
 					subCategoryLink: '/contact'
 				},
 				{
-					subCategory: 'Join us',
+					subCategory: 'Partnerships',
 					subCategoryLink: '/contact'
 				}
 			]
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '© The Learn Better Company 2024.'
 	}
 }

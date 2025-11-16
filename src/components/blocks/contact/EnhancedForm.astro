@@ -1,0 +1,105 @@
+---
+import Card from '../../ui/cards/partials/Card.astro'
+import CardBody from '../../ui/cards/partials/CardBody.astro'
+import Form from '../../ui/forms/Form.astro'
+import FormField from '../../ui/forms/partials/FormField.astro'
+import InputField from '../../ui/forms/form-elements/InputField.astro'
+import TextArea from '../../ui/forms/form-elements/TextArea.astro'
+import Button from '../../ui/Button.astro'
+
+type Props = {
+	classes?: string
+}
+const { classes } = Astro.props
+---
+
+<Card classes={classes}>
+	<CardBody>
+		<Form id="contact-form">
+			<h2 class="text-2xl">Get in Touch</h2>
+			<FormField>
+				<InputField type="text" id="name" label="Name" required />
+			</FormField>
+			<FormField>
+				<InputField type="email" id="email" label="Email" required />
+			</FormField>
+			<FormField>
+				<InputField type="text" id="company_name" label="Company Name" />
+			</FormField>
+			<FormField>
+				<InputField type="text" id="website" label="Website" />
+			</FormField>
+			<FormField>
+				<label for="service_interest" class="block text-sm font-medium mb-2">Service Interest</label>
+				<select
+					id="service_interest"
+					name="service_interest"
+					class="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+				>
+					<option value="">Select a service...</option>
+					<option value="Market Positioning">Market Positioning</option>
+					<option value="Customer Acquisition">Customer Acquisition</option>
+					<option value="Growth Strategy">Growth Strategy</option>
+					<option value="Content Marketing">Content Marketing</option>
+					<option value="Partnerships">Partnerships</option>
+					<option value="General Inquiry">General Inquiry</option>
+				</select>
+			</FormField>
+			<FormField>
+				<TextArea id="message" label="Message" required />
+			</FormField>
+			<Button style="primary" type="submit">Submit Inquiry</Button>
+			<div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+		</Form>
+	</CardBody>
+</Card>
+
+<script>
+	const form = document.getElementById('contact-form') as HTMLFormElement;
+	const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+
+	if (form) {
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+
+			const formData = new FormData(form);
+			const data = {
+				name: formData.get('name') as string,
+				email: formData.get('email') as string,
+				company_name: formData.get('company_name') as string,
+				website: formData.get('website') as string,
+				service_interest: formData.get('service_interest') as string,
+				message: formData.get('message') as string,
+			};
+
+			try {
+				const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL;
+				const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+				const response = await fetch(`${SUPABASE_URL}/rest/v1/contact_inquiries`, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'apikey': SUPABASE_ANON_KEY,
+						'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+						'Prefer': 'return=minimal'
+					},
+					body: JSON.stringify(data),
+				});
+
+				if (response.ok) {
+					messageDiv.textContent = 'Thank you for your inquiry! We\'ll be in touch soon.';
+					messageDiv.className = 'mt-4 p-4 rounded-lg bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200';
+					messageDiv.classList.remove('hidden');
+					form.reset();
+				} else {
+					throw new Error('Failed to submit');
+				}
+			} catch (error) {
+				messageDiv.textContent = 'There was an error submitting your inquiry. Please try again.';
+				messageDiv.className = 'mt-4 p-4 rounded-lg bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200';
+				messageDiv.classList.remove('hidden');
+			}
+		});
+	}
+</script>

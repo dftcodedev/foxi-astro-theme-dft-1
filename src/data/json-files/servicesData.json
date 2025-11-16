@@ -1,0 +1,107 @@
+[
+	{
+		"id": "market-positioning",
+		"title": "Market Positioning",
+		"slug": "market-positioning",
+		"icon": "chart-pie",
+		"shortDescription": "Define and communicate your unique value in the learntech landscape.",
+		"description": "We help learntech companies establish clear, compelling market positioning that resonates with decision-makers in educational institutions and corporate learning environments.",
+		"benefits": [
+			"Clear differentiation from competitors",
+			"Messaging that resonates with target audiences",
+			"Positioning strategy aligned with market needs",
+			"Value proposition development"
+		],
+		"approach": [
+			"Market and competitive analysis",
+			"Audience research and segmentation",
+			"Value proposition development",
+			"Messaging framework creation",
+			"Positioning validation and refinement"
+		]
+	},
+	{
+		"id": "customer-acquisition",
+		"title": "Customer Acquisition",
+		"slug": "customer-acquisition",
+		"icon": "user-group",
+		"shortDescription": "Build systematic approaches to reach and convert your ideal customers.",
+		"description": "We develop and execute customer acquisition strategies that connect learntech solutions with educational institutions and organizations actively seeking learning innovations.",
+		"benefits": [
+			"Targeted outreach to qualified prospects",
+			"Multi-channel acquisition strategies",
+			"Lead generation and nurturing systems",
+			"Conversion optimization"
+		],
+		"approach": [
+			"Target audience identification and profiling",
+			"Channel strategy and selection",
+			"Campaign planning and execution",
+			"Lead qualification frameworks",
+			"Performance tracking and optimization"
+		]
+	},
+	{
+		"id": "growth-strategy",
+		"title": "Growth Strategy",
+		"slug": "growth-strategy",
+		"icon": "arrow-trending-up",
+		"shortDescription": "Develop comprehensive roadmaps for sustainable business growth.",
+		"description": "We work with learntech companies to create actionable growth strategies that align business objectives with market opportunities and organizational capabilities.",
+		"benefits": [
+			"Clear growth roadmap and priorities",
+			"Resource allocation guidance",
+			"Risk mitigation strategies",
+			"Scalable growth frameworks"
+		],
+		"approach": [
+			"Current state assessment",
+			"Market opportunity analysis",
+			"Growth pathway identification",
+			"Strategic planning and prioritization",
+			"Implementation roadmap development"
+		]
+	},
+	{
+		"id": "content-marketing",
+		"title": "Content Marketing",
+		"slug": "content-marketing",
+		"icon": "document-text",
+		"shortDescription": "Create content that educates, engages, and converts your target audience.",
+		"description": "We develop content marketing strategies that establish learntech companies as thought leaders while driving meaningful engagement with potential customers.",
+		"benefits": [
+			"Thought leadership positioning",
+			"Educational content that builds trust",
+			"SEO-optimized content for discoverability",
+			"Multi-format content strategy"
+		],
+		"approach": [
+			"Content strategy development",
+			"Editorial planning and calendar creation",
+			"Content creation and optimization",
+			"Distribution and promotion planning",
+			"Performance measurement and refinement"
+		]
+	},
+	{
+		"id": "partnerships",
+		"title": "Partnerships",
+		"slug": "partnerships",
+		"icon": "chat-bubble-left-right",
+		"shortDescription": "Identify and develop strategic partnerships that accelerate growth.",
+		"description": "We help learntech companies identify, evaluate, and establish partnerships that expand market reach, enhance product offerings, and create mutual value.",
+		"benefits": [
+			"Strategic partner identification",
+			"Partnership development frameworks",
+			"Co-marketing and collaboration opportunities",
+			"Expanded market access"
+		],
+		"approach": [
+			"Partnership opportunity mapping",
+			"Partner evaluation and selection",
+			"Relationship development strategy",
+			"Collaboration framework design",
+			"Partnership activation and management"
+		]
+	}
+]

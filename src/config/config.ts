@@ -21,13 +21,13 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'TheLearnBetter.co | Growth Agency for LearnTech Companies',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'The Learn Better Company helps learntech companies reach customers and organizations through strategic growth services including market positioning, customer acquisition, and content marketing.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'TheLearnBetter.co logo'
 	},
 	canonical: true,
 	noindex: false,
