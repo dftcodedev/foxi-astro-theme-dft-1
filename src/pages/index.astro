@@ -9,9 +9,6 @@ import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
 import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
-// Content
-// - Testimonial background
-import testimonialBackground from '../assets/testimonial-bg-01.webp'
 // - SEO
 const SEO = {
 	title: 'TheLearnBetter.co | Growth Agency for LearnTech Companies',
@@ -23,7 +20,7 @@ const SEO = {
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero />
 	<Features />
-	<Testimonial bg={testimonialBackground} bgPosition="right" />
+	<Testimonial />
 	<HighlightBlocks />
 	<CTA />
 </Layout>

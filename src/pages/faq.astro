@@ -5,7 +5,9 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/PageHeader.astro'
 import FAQ from '../components/blocks/FAQ/FaqSticky.astro'
-import TextImage from '../components/blocks/basic/TextImage.astro'
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Data
@@ -14,8 +16,6 @@ import faqData from '../data/json-files/faqData.json'
 const faqPricing = faqData.filter((faq) => faq.category === 'pricing')
 const faqIntegrations = faqData.filter((faq) => faq.category === 'integrations')
 
-// Content
-import faqImage1 from '../assets/faq/faq-01.png'
 // - SEO
 const SEO = {
 	title: 'FAQ | TheLearnBetter.co',
@@ -36,15 +36,16 @@ const header = {
 		text="Learn about our growth services for learntech companies, including market positioning, customer acquisition, and strategic partnerships."
 		data={faqPricing}
 	/>
-	<TextImage
-		title="Tailored to the <strong>LearnTech</strong> Market"
-		text="We understand the unique challenges of selling to educational institutions and corporate learning organizations. Our strategies are informed by deep market knowledge and designed for practical implementation. We focus on creating sustainable growth through clear positioning, systematic customer acquisition, and strategic partnerships."
-		image={faqImage1}
-		mobileImage={faqImage1}
-		imagePosition="left"
-		offsetImage
-		classes="bg-neutral-50 dark:bg-neutral-900 lg:!py-64"
-	/>
+	<Section classes="bg-neutral-50 dark:bg-neutral-900">
+		<Row>
+			<Col span="12" align="center" classes="max-w-4xl mx-auto">
+				<h2>Tailored to the <strong>LearnTech</strong> Market</h2>
+				<p class="text-lg pb-0">
+					We understand the unique challenges of selling to educational institutions and corporate learning organizations. Our strategies are informed by deep market knowledge and designed for practical implementation. We focus on creating sustainable growth through clear positioning, systematic customer acquisition, and strategic partnerships.
+				</p>
+			</Col>
+		</Row>
+	</Section>
 	<FAQ
 		title="Working Together"
 		text="Learn about our engagement process, timelines, and how we collaborate with learntech companies to drive growth."
